@@ -6,7 +6,7 @@ You must edit this file with any new custom regex patterns and place them **BEFO
 
 ## proftpd
 
-```bash
+```perl
 if (($lgfile eq $config{FTPD_LOG}) and ($line =~ /\[(\S+)\]\).*\(Login failed\)/)) { return ("Failed FTP login from",$1,"proftpd_ss88","5","20,21","1"); }
 
 if (($lgfile eq $config{FTPD_LOG}) and ($line =~ /\[(\S+)\]\).*USER user: no such user found/)) { return ("Failed FTP login from",$1,"proftpd_ss88","5","20,21","1"); }
@@ -14,6 +14,6 @@ if (($lgfile eq $config{FTPD_LOG}) and ($line =~ /\[(\S+)\]\).*USER user: no suc
 
 ## vsftpd
 
-```bash
+```perl
 if (($lgfile eq $config{FTPD_LOG}) and ($line =~ /FAIL LOGIN: Client \"(\S+)\"/)) { return ("Failed FTP login from",$1,"vsftpd_ss88","5","20,21","1"); }
 ```
