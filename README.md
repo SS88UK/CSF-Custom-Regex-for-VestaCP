@@ -1,5 +1,5 @@
 # CSF-Custom-Regex-for-VestaCP
-Some custom regex rules to help block brute force attacks on VestaCP servers
+Some custom regex rules to help block brute force attacks on VestaCP servers. See the example file `regex.custom.pm` if you need help.
 
 # /etc/csf/regex.custom.pm
 You must edit this file with any new custom regex patterns and place them **BEFORE** `return 0`
